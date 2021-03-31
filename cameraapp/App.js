@@ -1,16 +1,19 @@
-import React from 'react';
-import {Text, View} from 'react-native';
+import React, { Component } from 'react';
+import {Platform, Text, View} from 'react-native';
+import MapView from "react-native-maps";
 
-const HelloWorldApp = () => {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      <Text>Hello, world!</Text>
-    </View>
-  );
-};
-export default HelloWorldApp;
+
+export default class App extends Component{
+  render() {
+    return (
+      <MapView
+        initialRegion={{
+          latitude: 37.78825,
+          longitude: -122.4324,
+          latitudeDelta: 0.0922,
+          longitudeDelta: 0.0421,
+        }}
+      />
+    );
+  }
+}
