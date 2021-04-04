@@ -12,6 +12,12 @@
 #import <SKIOSNetworkPlugin/SKIOSNetworkAdapter.h>
 #import <FlipperKitReactPlugin/FlipperKitReactPlugin.h>
 
+
+//#import <UIKit>//;
+#import <Firebase.h>//;
+// @import UIKit;
+// @import Firebase;
+
 static void InitializeFlipper(UIApplication *application) {
   FlipperClient *client = [FlipperClient sharedClient];
   SKDescriptorMapper *layoutDescriptorMapper = [[SKDescriptorMapper alloc] initWithDefaults];
@@ -42,6 +48,10 @@ static void InitializeFlipper(UIApplication *application) {
       rootView.backgroundColor = [UIColor whiteColor];
   }
 
+  if ([FIRApp defaultApp] == nil) {
+      [FIRApp configure];
+    }
+
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   UIViewController *rootViewController = [UIViewController new];
   rootViewController.view = rootView;
@@ -60,3 +70,30 @@ static void InitializeFlipper(UIApplication *application) {
 }
 
 @end
+
+
+
+
+// @implementation AppDelegate
+
+// - (BOOL)application:(UIApplication *)application
+//     didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+//   [FIRApp configure];
+//   return YES;
+
+
+// import UIKit
+// import Firebase
+
+// @UIApplicationMain
+// class AppDelegate: UIResponder, UIApplicationDelegate {
+
+//   var window: UIWindow?
+
+//   func application(_ application: UIApplication,
+//     didFinishLaunchingWithOptions launchOptions:
+//       [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+//     FirebaseApp.configure()
+//     return true
+//   }
+// }
