@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>884083471455-sabkiu4qv28ovrtpbe9cpuofekhftu09.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.884083471455-sabkiu4qv28ovrtpbe9cpuofekhftu09</string>
+	<key>API_KEY</key>
+	<string>AIzaSyC3DyYF_0ELR_AoNwaA2VWB9lB9bTRNOEo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>884083471455</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.cameraapp1</string>
+	<key>PROJECT_ID</key>
+	<string>cameraappmaximeec505</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cameraappmaximeec505.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:884083471455:ios:f85037dedf269c67efd7ea</string>
+</dict>
+</plist>
