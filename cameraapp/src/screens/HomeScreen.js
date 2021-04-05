@@ -2,12 +2,17 @@ import React, {useContext} from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 import FormButton from '../components/FormButton';
 import {AuthContext} from '../navigation/AuthProvider';
+import MapScreen from '../screens/MapScreen';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   const {user, logout} = useContext(AuthContext);
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Welcome {user.email}</Text>
+      <FormButton
+        buttonTitle="Map"
+        onPress={() => navigation.navigate('Map')}
+      />
       <FormButton buttonTitle="Logout" onPress={() => logout()} />
     </View>
   );
