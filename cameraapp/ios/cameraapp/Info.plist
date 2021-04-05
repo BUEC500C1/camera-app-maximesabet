@@ -57,5 +57,7 @@
 	<!-- Include this only if you are planning to use the microphone for video recording -->
 	<key>NSMicrophoneUsageDescription</key>
 	<string>Allow the use to microphone</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Photo Library Access Warning</string>
 </dict>
 </plist>
