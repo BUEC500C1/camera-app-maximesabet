@@ -51,12 +51,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-	<!-- Required with iOS 10 and higher -->
-	<key>NSCameraUsageDescription</key>
-	<string>Allow the use of camera</string>
-	<!-- Include this only if you are planning to use the microphone for video recording -->
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Allow the use to microphone</string>
-
 </dict>
 </plist>
