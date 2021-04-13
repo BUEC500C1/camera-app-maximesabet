@@ -9,44 +9,19 @@ import {
   Alert,
   Image,
 } from 'react-native';
-// import ImagePicker from 'react-native-image-picker';
 import storage from '@react-native-firebase/storage';
 import * as Progress from 'react-native-progress';
-import * as ImagePicker from 'react-native-image-picker';
 
 
 
-export default function UploadScreen() {
-  const [image, setImage] = useState(null);
+export default function UploadScreen({navigaton, route}) {
+  const [image, setImage] = useState(route.params.image);
   const [uploading, setUploading] = useState(false);
   const [transferred, setTransferred] = useState(0);
-  
-  const selectImage = () => {
-    const options = {
-      maxWidth: 2000,
-      maxHeight: 2000,
-      storageOptions: {
-        skipBackup: true,
-        path: 'images',
-      },
-    };
-    ImagePicker.showImagePicker(options, response => {
-      if (response.didCancel) {
-        console.log('User cancelled image picker');
-      } else if (response.error) {
-        console.log('ImagePicker Error: ', response.error);
-      } else if (response.customButton) {
-        console.log('User tapped custom button: ', response.customButton);
-      } else {
-        const source = {uri: response.uri};
-        console.log(source);
-        setImage(source);
-      }
-    });
-  };
 
+  
   const uploadImage = async () => {
-    const {uri} = image;
+    const uri = image;
     const filename = uri.substring(uri.lastIndexOf('/') + 1);
     const uploadUri = Platform.OS === 'ios' ? uri.replace('file://', '') : uri;
     setUploading(true);
@@ -74,12 +49,9 @@ export default function UploadScreen() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <TouchableOpacity style={styles.selectButton} onPress={selectImage}>
-        <Text style={styles.buttonText}>Pick an image</Text>
-      </TouchableOpacity>
       <View style={styles.imageContainer}>
         {image !== null ? (
-          <Image source={{uri: image.uri}} style={styles.imageBox} />
+          <Image source={{uri: image}} style={styles.imageBox} />
         ) : null}
         {uploading ? (
           <View style={styles.progressBarContainer}>

@@ -26,4 +26,5 @@ Scan barcodes and blur faces on the pictures
 * https://rnfirebase.io/
 * https://blog.logrocket.com/how-to-set-up-email-authentication-with-react-native-react-navigation-and-firebase/
 
-
+# Start
+npx react-native run-ios
