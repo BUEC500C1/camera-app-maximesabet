@@ -1,4 +1,4 @@
-//Authentification
+//Authentification and start of the app
 
 import React from 'react';
 import {AuthProvider} from './src/navigation/AuthProvider';
