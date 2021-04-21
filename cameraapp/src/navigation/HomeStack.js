@@ -14,7 +14,7 @@ export default function HomeStack() {
       <Stack.Screen name="Map" component={MapScreen} />
       <Stack.Screen name="Camera" component={CameraScreen} />
       <Stack.Screen name="Upload" component={UploadScreen} />
-      <Stack.Screen name="Storage" component={StorageScreen} />
+      {/* <Stack.Screen name="Storage" component={StorageScreen} /> */}
     </Stack.Navigator>
   );
 }
