@@ -25,6 +25,10 @@
 * DB => Firebase 
 * Platform => IOS
 
+## Demo 
+
+* https://drive.google.com/file/d/1unem2ukIN_1JRRrMNjXy7LzZcA5UHeMW/view?usp=sharing
+
 # Start
 * Install dependencies: https://reactnative.dev/docs/environment-setup
 * Install yarn: https://classic.yarnpkg.com/en/docs/install/#mac-stable
