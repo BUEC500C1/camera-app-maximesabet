@@ -1,8 +1,21 @@
 import React from 'react';
-import {View, TouchableOpacity, Image} from 'react-native';
+import {
+  View,
+  SafeAreaView,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  Platform,
+  Alert,
+  Image,
+} from 'react-native';
 import {RNCamera} from 'react-native-camera';
+import storage from '@react-native-firebase/storage';
+import * as Progress from 'react-native-progress';
+
 export default class CameraView extends React.Component {
   state = {};
+
   render() {
     return (
       <View
@@ -34,6 +47,7 @@ export default class CameraView extends React.Component {
             // take picture
             const result = await this.camera.takePictureAsync();
             this.setState({imageUri: result.uri});
+            this.props.navigation.navigate("Upload", {image:this.state.imageUri})
           }}
         />
       </View>
